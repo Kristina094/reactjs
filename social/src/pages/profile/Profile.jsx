@@ -10,10 +10,22 @@ export default function Profile() {
      <div className="profile">
         <Sidebar/>
         <div className="profileRight">
-            <div className="profileRightTop">saas</div>
-            <div className="profileRightBottom"></div>
+            <div className="profileRightTop">
+              <div className="profileCover">
+
+              <img className="profileCoverImg" src="assets/post/3.jpeg" alt="" />
+              <img className="profileUserImg" src="assets/person/7.jpeg" alt="" />
+              </div>
+              <div className="profileInfo">
+                <h4 className="profileInfoName">safak Kocaoglu</h4>
+                <span className="profileInfoDesc"> hello</span>
+              </div>
+            </div>
+            <div className="profileRightBottom">
+
          <Feed/>
          <Rightbar/>
+          </div>
       </div>
      </div>
     </>
