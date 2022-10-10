@@ -17,8 +17,8 @@ export default function Profile() {
               <img className="profileUserImg" src="assets/person/7.jpeg" alt="" />
               </div>
               <div className="profileInfo">
-                <h4 className="profileInfoName">safak Kocaoglu</h4>
-                <span className="profileInfoDesc"> hello</span>
+                <h4 className="profileInfoName">Safak Kocaoglu</h4>
+                <span className="profileInfoDesc"> Hello my friend</span>
               </div>
             </div>
             <div className="profileRightBottom">
