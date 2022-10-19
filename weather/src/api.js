@@ -1,4 +1,4 @@
-export const geaApioptions = {
+export const geoApiOptions = {
         method: 'GET',
         headers: {
             'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
