@@ -1,10 +1,10 @@
 import "./topbar.css"
-import{Person, Search, Chat, Notifications} from "@mui/icons-material"
-export default function Topbar() {
+import{Person, Search, Chat, Notifications,} from "@mui/icons-material"
+export default function Topbar({data}) {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft"> 
-      <span className="logo">Lamasocial</span> 
+      <span className="logo">{data}</span> 
       </div>
       <div className="topbarCenter">
         <div className="searchbar">
