@@ -6,7 +6,7 @@ export default function Home() {
   const urlLookup = "http://btax.mandakh.org:8000/lookup/";
   useEffect(() => {
     const bodyChiglel = {
-      action: "chiglel",
+      action: "aimagsum",
     };
     sendRequest(urlLookup, bodyChiglel);
   }, []);
@@ -27,9 +27,12 @@ export default function Home() {
         console.log(err.message);
       });
   };
+
+  console.log(datas)
   return (
     <>
-    <Topbar data={datas && datas.data[9].chiglelname}/>
+
+    <Topbar data={datas && datas.data[19].sumduud[7].sumname}/>
 
     </>
   )
