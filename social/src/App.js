@@ -1,10 +1,15 @@
-import { ChargingStation } from "@mui/icons-material";
+import {
+  Air,
+  AnimationRounded,
+  ChargingStation,
+  Info,
+} from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import Home from "./pages/home/Home";
-import { getUserAsync, urlLookup } from "./settings/settings";
+import { primary, Button } from "antd";
+import { sendRequest, urlLookup } from "./settings/Settings";
 // import { Person } from "@mui/icons-material";
 function App() {
-
   const [datas, setDatas] = useState();
 
   useEffect(() => {
@@ -12,18 +17,32 @@ function App() {
       action: "chiglel",
     };
 
+    sendRequest(urlLookup, bodyChiglel).then((data) => setDatas(data));
+  }, []);
 
-    getUserAsync(urlLookup, bodyChiglel).then((data) => setDatas(data));
-
-
-
-  }, [])
-
-return (
-  <>
-  <p>{datas && JSON.stringify(datas)}</p>
-  <Home />
-  </>
-)
+  const DisplayData =
+    datas &&
+    datas.data.map((gazar) => {
+      return (
+        <div key={gazar.chiglelnum}>
+          <h5>
+            <Button
+              type="primary"
+              onClick={() => console.log(gazar.chiglelnum)}
+            >
+              {gazar.chiglelname}
+            </Button>
+          </h5>
+          <br />
+        </div>
+      );
+    });
+  return (
+    <>
+      {DisplayData}
+      <p>{datas && JSON.stringify(datas)}</p>
+      <Home />
+    </>
+  );
 }
 export default App;
