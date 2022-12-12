@@ -7,7 +7,7 @@ import {
 import { useEffect, useState } from "react";
 import Home from "./pages/home/Home";
 import { primary, Button } from "antd";
-import { sendRequest, urlLookup } from "./settings/Settings";
+import { sendRequest, urlLookup } from "./settings/settings";
 // import { Person } from "@mui/icons-material";
 function App() {
   const [datas, setDatas] = useState();
@@ -20,6 +20,7 @@ function App() {
     sendRequest(urlLookup, bodyChiglel).then((data) => setDatas(data));
   }, []);
 
+
   const DisplayData =
     datas &&
     datas.data.map((gazar) => {
@@ -28,8 +29,7 @@ function App() {
           <h5>
             <Button
               type="primary"
-              onClick={() => console.log(gazar.chiglelnum)}
-            >
+              onClick={() => console.log(gazar.chiglelnum)}>
               {gazar.chiglelname}
             </Button>
           </h5>
